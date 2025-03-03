@@ -127,6 +127,7 @@ closeBtn.addEventListener("click", () => {
   removeUnwantedDiv();
 });
 
+//fonction qui supprime les div indésirables
 function removeUnwantedDiv() {
   if (content.querySelector(".form").nextElementSibling) {
     content.querySelector(".form").nextElementSibling.remove();
