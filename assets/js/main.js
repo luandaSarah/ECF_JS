@@ -11,12 +11,7 @@ let allAccounts = [];
 
 //Au click sur accountBtn afficher le formulaire de creation de compte
 accountBtn.addEventListener("click", () => {
-  if (content.querySelector(".form").nextElementSibling) {
-    content.querySelector(".form").nextElementSibling.remove();
-  }
-  if (content.querySelector(".result-response")) {
-    content.querySelector(".result-response").remove();
-  }
+  removeUnwantedDiv();
 
   const creationForm = document.createElement("div");
   creationForm.classList.add("form");
@@ -65,12 +60,7 @@ content.addEventListener("click", (e) => {
 
 //Au click sur depositBtn afficher le formulaire de depot
 depositBtn.addEventListener("click", () => {
-  if (content.querySelector(".form").nextElementSibling) {
-    content.querySelector(".form").nextElementSibling.remove();
-  }
-  if (content.querySelector(".result-response")) {
-    content.querySelector(".result-response").remove();
-  }
+  removeUnwantedDiv();
 
   const creationForm = document.createElement("div");
   creationForm.classList.add("form");
@@ -134,10 +124,14 @@ function resultResponse(succes = false, message) {
 
 //fermer les formulaires au click sur le bouton close
 closeBtn.addEventListener("click", () => {
+  removeUnwantedDiv();
+});
+
+function removeUnwantedDiv() {
   if (content.querySelector(".form").nextElementSibling) {
     content.querySelector(".form").nextElementSibling.remove();
   }
   if (content.querySelector(".result-response")) {
     content.querySelector(".result-response").remove();
   }
-});
+}
