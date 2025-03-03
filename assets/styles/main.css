@@ -87,3 +87,15 @@ body {
     margin: 1em;
     padding: 0.5em;
 }
+
+.btn {
+    background: #111;
+    border-radius: 6px;
+    color: #eee;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background 0.3s ease-in;
+}

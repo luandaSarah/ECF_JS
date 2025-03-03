@@ -6,7 +6,7 @@
         this.balance = balance;
     }
 
-     handleDeposit(amount) {
+     setDeposit(amount) {
         this.balance += amount;
         return this.balance;
     }
